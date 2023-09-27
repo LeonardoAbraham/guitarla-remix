@@ -1,7 +1,11 @@
-import { Link } from "@remix-run/react" 
+import { Link, useLocation } from "@remix-run/react" 
 import logo from '../../public/img/logo.svg'
 
 const Header = () => {
+
+    const location = useLocation()
+    console.log(location)
+
     return (
         <header className="header"> 
             <div className="contenedor barra">
@@ -11,25 +15,25 @@ const Header = () => {
                 <nav className="navegacion">
                     <Link 
                         to="/"
-                        prefetch="render"
+                        className={location.pathname === '/' ? 'active':''}
                     >
                         Inicio
                     </Link>
                     <Link 
                         to="/nosotros"
-                        prefetch="render"
+                        className={location.pathname === '/nosotros' ? 'active':''}
                     >
                         Nosotros
                     </Link>
                     <Link 
                         to="/tienda"
-                        prefetch="render"
+                        className={location.pathname === '/tienda' ? 'active':''}
                     >
                         Tienda
                     </Link>
                     <Link 
                         to="/blog"
-                        prefetch="render"
+                        className={location.pathname === '/blog' ? 'active':''}
                     >
                         Blog
                     </Link>
