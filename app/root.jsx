@@ -83,5 +83,10 @@ export function ErrorBoundary(){
             </Document>
         )
     }
-    return <p className="error">Error Desconocido</p>
+    return (
+        <Document>
+            <p className="error">Error Desconocido</p>
+            <Link className='error-enlace' to={'/'}>Tal vez quieras volver a la página principal</Link>
+        </Document>
+    )
 }
