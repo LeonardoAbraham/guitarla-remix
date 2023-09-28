@@ -1,15 +1,17 @@
-import React from 'react'
-
+import { useLoaderData } from "@remix-run/react";
+import { getGuitarra } from "../models/guitarras.server";
 
 export async function loader({params}){
     const { guitarraUrl } = params;
 
-    console.log(guitarraUrl);
+    const guitarra = await getGuitarra(guitarraUrl)
 
-    return {}
+    return guitarra
 }
 
 const Guitarra = () => {
+    const guitarra = useLoaderData();
+    console.log(guitarra)
     return (
         <div>guitarras.$guitarraUrl</div>
     )
