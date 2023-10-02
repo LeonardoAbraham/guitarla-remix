@@ -7,10 +7,6 @@ export function meta(){
             title: 'GuitarLA - Sobre Nosotros'
         },
         {
-            property: "og:title",
-            content: "GuitarLA - Sobre Nosotros",
-        },
-        {
             name: "description",
             content: "Venta de guitarras, blog de música",
         },

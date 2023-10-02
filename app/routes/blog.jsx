@@ -9,10 +9,6 @@ export function meta(){
             title: 'GuitarLA - Nuestro Blog'
         },
         {
-            property: "og:title",
-            content: "GuitarLA - Nuestro Blog",
-        },
-        {
             name: "description",
             content: "GuitarLA, Blog de música y venta de guitarras",
         },

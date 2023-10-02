@@ -9,10 +9,6 @@ export function meta(){
             title: 'GuitarLA - Tienda de Guitarras'
         },
         {
-            property: "og:title",
-            content: "GuitarLA - Tienda de Guitarras",
-        },
-        {
             name: "description",
             content: "GuitarLA - Nuestra colección de guitarras",
         },

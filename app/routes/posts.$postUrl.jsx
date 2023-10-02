@@ -10,10 +10,6 @@ export function meta({data}){
                 title: `GuitarLA - Entrada no encontrada`
             },
             {
-                property: "og:title",
-                content: `GuitarLA - Entrada no encontrada`,
-            },
-            {
                 name: "description",
                 content: `Guitarras, venta de guitarras, guitarra no encontrada`,
             },
@@ -22,10 +18,6 @@ export function meta({data}){
     return [
         {
             title: `GuitarLA - ${data.data[0].attributes.titulo}`
-        },
-        {
-            property: "og:title",
-            content: `GuitarLA - ${data.data[0].attributes.titulo}`,
         },
         {
             name: "description",
@@ -47,7 +39,7 @@ export async function loader({params}){
     const { postUrl } = params;
     const post = await getPost(postUrl);
 
-    if(post.data.length === 0){
+    if(post?.data?.length === 0){
         throw new Response('',{
             status: 404,
             statusText: 'Entrada no encontrada'
