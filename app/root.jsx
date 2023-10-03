@@ -77,7 +77,8 @@ export default function App() {
             <Outlet 
                 context={
                     {
-                        agregarCarrito
+                        agregarCarrito,
+                        carrito
                     }
                 }
             />
