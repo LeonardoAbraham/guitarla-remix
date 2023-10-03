@@ -4,7 +4,7 @@ const Curso = ({curso}) => {
     const { contenido, imagen, titulo } = curso;
     return (
         <section className="curso">
-            <style jsx>{`
+            <style jsx="true">{`
                 .curso {
                     background-image: linear-gradient(to right, rgb(0 0 0 / .65), rgb(0 0 0 / .7)), url(${imagen.data.attributes.url})
                 }
