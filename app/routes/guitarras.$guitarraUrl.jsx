@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLoaderData } from "@remix-run/react";
+import { useLoaderData, useOutletContext } from "@remix-run/react";
 import { getGuitarra } from "../models/guitarras.server";
 
 export function meta({data}){
@@ -42,6 +42,8 @@ export async function loader({params}){
 
 const Guitarra = () => {
 
+    const {agregarCarrito} = useOutletContext();
+
     const [cantidad, setCantidad] = useState(0)
 
     const guitarra = useLoaderData();
@@ -63,6 +65,8 @@ const Guitarra = () => {
             precio,
             cantidad
         }
+
+        agregarCarrito(guitarraSeleccionada);
     }
 
     return (
